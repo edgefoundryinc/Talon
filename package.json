@@ -1,0 +1,63 @@
+{
+  "name": "@sygnl/talon",
+  "version": "1.0.1",
+  "description": "Bidirectional event delivery client with WebSocket and Webhook transports",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./transports": {
+      "types": "./dist/transports.d.ts",
+      "import": "./dist/transports.js",
+      "require": "./dist/transports.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "keywords": [
+    "websocket",
+    "webhook",
+    "event",
+    "delivery",
+    "real-time",
+    "bidirectional",
+    "workers",
+    "cloudflare",
+    "Requests"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/ws": "^8.5.10",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3",
+    "vitest": "^1.0.4",
+    "@vitest/coverage-v8": "^1.0.4",
+    "happy-dom": "^12.10.3"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "author": "Edge Foundry, Inc.",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sygnl/talon"
+  }
+}
